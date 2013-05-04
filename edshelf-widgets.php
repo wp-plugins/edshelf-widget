@@ -3,7 +3,7 @@
 Plugin Name: edshelf Widgets
 Plugin URI: http://edshelf.com
 Description: Adds a shortcode for embedding an edshelf widget on your site.
-Version: 0.2
+Version: 0.2.1
 Author: edshelf
 Author URI: http://edshelf.com
 */
@@ -103,7 +103,7 @@ function edshelf_collection_widget_function( $atts ) {
         'type'   => EDSHELF_DEFAULT_COLLECTION_TYPE
     ), $atts ) );
 
-    return edshelf_collection_widget_embed( $id );
+    return edshelf_collection_widget_embed( $id, $height, $type );
 }
 
 
@@ -154,11 +154,11 @@ function edshelf_collection_widget_control() {
 ?>
 <p>
     <label for="edshelf-collection-id">Collection ID</label>:
-    <input type="text" id="edshelf-collection-id" name="edshelf_collection_id" size="5" maxlength="5" value="<?php echo $options['id'];?>">
+    <input type="text" id="edshelf-collection-id" name="edshelf_collection_id" size="5" maxlength="5" value="<?php echo $options['id'];?>"><br>
     <label for="edshelf-collection-height">Widget height</label>:
-    <input type="text" id="edshelf-collection-height" name="edshelf_collection_height" size="5" maxlength="6" value="<?php echo $options['height'];?>">
+    <input type="text" id="edshelf-collection-height" name="edshelf_collection_height" size="5" maxlength="6" value="<?php echo $options['height'];?>"><br>
     <label for="edshelf-collection-height">Widget type</label>:
-    <input type="text" id="edshelf-collection-type" name="edshelf_collection_type" size="5" maxlength="10" value="<?php echo $options['type'];?>">
+    <input type="text" id="edshelf-collection-type" name="edshelf_collection_type" size="5" maxlength="10" value="<?php echo $options['type'];?>"><br>
     <input type="hidden" name="edshelf_collection_submit" value="1">
 </p>
 <p>The Collection ID can be found on the page for the collection on edshelf. Look for the code in the Widget module at the bottom of the right column. The ID will look like <code>id="8786"</code> in the code.</p>

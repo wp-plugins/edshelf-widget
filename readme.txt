@@ -3,7 +3,7 @@ Tags: edshelf, education, edtech, collection, apps, tools, embed, widget
 Contributors: edshelf, mikeleeorg
 Tested up to: 3.5
 Requires at least: 2.9
-Stable Tag: 0.2
+Stable Tag: 0.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
