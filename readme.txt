@@ -3,7 +3,7 @@ Tags: edshelf, education, edtech, collection, apps, tools, embed, widget
 Contributors: edshelf, mikeleeorg
 Tested up to: 3.5
 Requires at least: 2.9
-Stable Tag: 0.2.1
+Stable Tag: 0.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,11 +15,11 @@ Adds a shortcode and template tag for embedding an edshelf widget onto your site
 
 This plugin provides a shortcode so you can easily embed an edshelf widget onto your site.
 
-The shortcode is: `[edshelf-collection-widget id="NNNN" height="YYY" type="TTTT"]`
+The shortcode is: `[edshelf-collection-widget id="NNNN" height="YYY" format="FFFF"]`
 
-The template tag is: `edshelf_collection_widget( NNNN, YYYY, 'TTTT' );`
+The template tag is: `edshelf_collection_widget( NNNN, YYYY, 'FFFF' );`
 
-Where `NNNN` is the ID of the collection you want to embed, `YYY` is the height of the widget in pixels, and `TTTT` is the type of widget. You can get this ID from the collection on edshelf, in the Widget module at the bottom of the right column. The choices for the type of widget are "full" (the default setting), "compact", or "list".
+Where `NNNN` is the ID of the collection you want to embed, `YYY` is the height of the widget in pixels, and `FFFF` is the format of widget. You can get this ID from the collection on edshelf, in the Widget module at the bottom of the right column. The choices for the format of widget are "full" (the default setting), "compact", or "list".
 
 == Installation ==
 
@@ -30,9 +30,9 @@ Where `NNNN` is the ID of the collection you want to embed, `YYY` is the height 
 1. Look for the Widget module at the bottom of the right column. In that module will be some code.
 1. Look for a 4 or 5-digit number in that code. That number is the ID number of the collection.
 1. Go to the blog post or page on which you want to embed this collection widget.
-1. Type in the following WordPress shortcode in the text editor: `[edshelf-collection-widget id="NNNN" height="YYY" type="TTTT"]`.
-1. The settings are: `NNNN` is the collection ID you just found. `YYY` is the height of the widget in pixels. `TTTT` is the type of widget, where your choices are "full" (the default setting), "compact", or "list".
-1. Or use the template tag `edshelf_collection_widget( $id, $height, '$type' );` if you are familiar with PHP.
+1. Type in the following WordPress shortcode in the text editor: `[edshelf-collection-widget id="NNNN" height="YYY" format="FFFF"]`.
+1. The settings are: `NNNN` is the collection ID you just found. `YYY` is the height of the widget in pixels. `FFFF` is the format of widget, where your choices are "full" (the default setting), "compact", or "list".
+1. Or use the template tag `edshelf_collection_widget( $id, $height, '$format' );` if you are familiar with PHP.
 1. And you're done!
 
 == Frequently Asked Questions ==
@@ -65,4 +65,8 @@ If you need additional assistance, email us at [support@edshelf.com](mailto:supp
 
 == Changelog ==
 
-None yet.
+= 0.2.2 =
+* Replaced the parameter and term "type" with "format" for future compatibility of upcoming features.
+
+= 0.2.1 =
+* Added support for widget types, such as full, list, and compact.
