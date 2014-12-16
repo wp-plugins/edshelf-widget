@@ -1,7 +1,7 @@
 === edshelf Widget ===
 Tags: edshelf, education, edtech, collection, apps, tools, embed, widget
 Contributors: edshelf, mikeleeorg
-Tested up to: 3.5
+Tested up to: 4.1
 Requires at least: 2.9
 Stable Tag: 0.2.2
 License: GPLv2 or later
