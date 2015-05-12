@@ -65,6 +65,9 @@ If you need additional assistance, email us at [support@edshelf.com](mailto:supp
 
 == Changelog ==
 
+= 1.1 =
+* Added image assets.
+
 = 1.0 =
 * Updated code to reflect the new naming scheme ("shelves" instead of "collections") and architecture of the edshelf site. Changed settings and controls accordingly.
 
