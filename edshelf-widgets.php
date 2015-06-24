@@ -3,7 +3,7 @@
 Plugin Name: edshelf Widgets
 Plugin URI: https://edshelf.com
 Description: Adds a shortcode for embedding an edshelf widget on your site.
-Version: 1.0
+Version: 1.2
 Author: edshelf
 Author URI: https://edshelf.com
 */
