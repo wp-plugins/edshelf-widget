@@ -72,11 +72,12 @@ function edshelf_widgets_admin_page() {
 /**
  * Returns the Shelf widget itself
  */
-function edshelf_shelf_widget_embed( $id = EDSHELF_DEFAULT_SHELF_ID, $height = EDSHELF_DEFAULT_SHELF_HEIGHT, $format = EDSHELF_DEFAULT_SHELF_FORMAT ) {
+function edshelf_shelf_widget_embed( $id = EDSHELF_DEFAULT_SHELF_ID, $height = EDSHELF_DEFAULT_SHELF_HEIGHT, $format = EDSHELF_DEFAULT_SHELF_FORMAT, $which = 's' ) {
     $id     = esc_attr( $id );
     $height = esc_attr( $height );
     $format = esc_attr( $format );
-    return "<div id='edshelf-widget-shelf-{$id}'></div><script src='https://edshelf.com/widgets/shelf/?id={$id}&height={$height}&format={$format}&type=shelf'></script>";
+    $which  = ( $which == 'c' ) ? 'collection' : 'shelf';
+    return "<div id='edshelf-widget-shelf-{$id}'></div><script src='https://edshelf.com/widgets/{$which}/?id={$id}&height={$height}&format={$format}&type=shelf'></script>";
 }
 
 
@@ -94,10 +95,8 @@ function edshelf_shelf_widget( $id, $height, $format ) {
  * Creates a shortcode for the Shelf widget
  *
  * [edshelf-shelf-widget id="33080" height="550" format="grid"]
- * [edshelf-shelf-widget id="33080" height="550" format="grid"] // Legacy shortcode
  */
 add_shortcode( 'edshelf-shelf-widget', 'edshelf_shelf_widget_function' );
-add_shortcode( 'edshelf-collection-widget', 'edshelf_shelf_widget_function' ); // Legacy shortcode
 function edshelf_shelf_widget_function( $atts ) {
     extract( shortcode_atts( array(
         'id'     => EDSHELF_DEFAULT_SHELF_ID,
@@ -106,6 +105,23 @@ function edshelf_shelf_widget_function( $atts ) {
     ), $atts ) );
 
     return edshelf_shelf_widget_embed( $id, $height, $format );
+}
+
+
+/**
+ * Creates a legacy shortcode for the Shelf widget
+ *
+ * [edshelf-collection-widget id="33080" height="550" format="grid"]
+ */
+add_shortcode( 'edshelf-collection-widget', 'edshelf_collection_widget_function' );
+function edshelf_collection_widget_function( $atts ) {
+    extract( shortcode_atts( array(
+        'id'     => EDSHELF_DEFAULT_SHELF_ID,
+        'height' => EDSHELF_DEFAULT_SHELF_HEIGHT,
+        'format' => EDSHELF_DEFAULT_SHELF_FORMAT
+    ), $atts ) );
+
+    return edshelf_shelf_widget_embed( $id, $height, $format, 'c' );
 }
 
 
