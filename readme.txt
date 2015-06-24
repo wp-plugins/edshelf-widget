@@ -3,7 +3,7 @@ Tags: edshelf, education, edtech, collection, apps, tools, embed, widget, shelf
 Contributors: edshelf, mikeleeorg
 Tested up to: 4.2.2
 Requires at least: 2.9
-Stable Tag: 1.0
+Stable Tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,6 +64,9 @@ Sorry, not yet. We do intend to offer multiple language support in the future th
 If you need additional assistance, email us at [support@edshelf.com](mailto:support@edshelf.com).
 
 == Changelog ==
+
+= 1.2 =
+* Added backwards compatibility with previous shortcode, `[edshelf-collection-widget]`
 
 = 1.1 =
 * Added image assets.

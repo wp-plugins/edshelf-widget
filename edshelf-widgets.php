@@ -94,8 +94,10 @@ function edshelf_shelf_widget( $id, $height, $format ) {
  * Creates a shortcode for the Shelf widget
  *
  * [edshelf-shelf-widget id="33080" height="550" format="grid"]
+ * [edshelf-shelf-widget id="33080" height="550" format="grid"] // Legacy shortcode
  */
 add_shortcode( 'edshelf-shelf-widget', 'edshelf_shelf_widget_function' );
+add_shortcode( 'edshelf-collection-widget', 'edshelf_shelf_widget_function' ); // Legacy shortcode
 function edshelf_shelf_widget_function( $atts ) {
     extract( shortcode_atts( array(
         'id'     => EDSHELF_DEFAULT_SHELF_ID,
